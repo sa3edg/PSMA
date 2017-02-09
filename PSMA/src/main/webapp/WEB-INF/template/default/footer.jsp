@@ -1,0 +1,1 @@
+<div class="footer">Copyright  &#169; 2014 Benchmark, All rights reserved.</div>

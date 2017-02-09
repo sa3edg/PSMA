@@ -1,0 +1,337 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.benchmark.psma</groupId>
+	<artifactId>PSMA</artifactId>
+	<version>0.1</version>
+	<name>Points System Mall of Arabia</name>
+	<packaging>war</packaging>
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<warSourceDirectory>src/main/webapp</warSourceDirectory>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<!-- spring framework -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- end of spring framework -->
+		
+		<!-- spring mvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- end spring mvc -->
+		
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+
+		<!-- Spring Security JSP Taglib -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-taglibs</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		
+		<!-- Tiles -->
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-extras</artifactId>
+			<version>${tiles-version}</version>
+		</dependency>
+		
+		<!-- servlet api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Servlet -->
+        <dependency>
+        	<groupId>javax.servlet.jsp</groupId>
+        	<artifactId>jsp-api</artifactId>
+        	<version>2.1</version>
+        	<scope>provided</scope>
+        </dependency>
+
+		<!-- jdbc dependency -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.1.2</version>
+        </dependency>
+		<!-- end of jdbc dependency -->
+
+		<!-- jstl -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>${jstl.version}</version>
+		</dependency>
+
+		<!-- spring-data-jdbc-repository -->
+		<dependency>
+			<groupId>com.nurkiewicz.jdbcrepository</groupId>
+			<artifactId>jdbcrepository</artifactId>
+			<version>0.4</version>
+		</dependency>
+
+         <!-- spring tag lib -->
+		<dependency>
+		<groupId>taglibs</groupId>
+		<artifactId>standard</artifactId>
+		<version>1.1.2</version>
+	    </dependency>
+	    
+	    <!--  <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+            <version>1.4.17</version>
+            <scope/>
+        </dependency>
+	<dependency>
+    		<groupId>com.netflix.hystrix</groupId>
+    		<artifactId>hystrix-metrics-event-stream</artifactId>
+    		<version>1.4.17</version>
+	</dependency>-->
+	    
+	    <!-- display tag lib -->
+    	<!--<dependency>
+            <groupId>com.bdot</groupId>
+            <artifactId>displaytag-header-patch</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>-->
+        <dependency>
+        	<groupId>displaytag</groupId>
+      		<artifactId>displaytag</artifactId>
+      		<version>1.2</version>
+    	</dependency>
+    	<!-- display tag lib -->
+	    <dependency>
+	    	<groupId>displaytag</groupId>
+			<artifactId>displaytag-export-poi</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- add proprietary libraries -->
+		<!--  <dependency>
+			<groupId>com.benchmark.pushsharp</groupId>
+			<artifactId>PushSharp</artifactId>
+			<version>${pushsharp.version}</version>
+		</dependency>-->
+		
+		<!-- sl4j -->
+		<dependency>
+  			<groupId>org.slf4j</groupId>
+  			<artifactId>slf4j-api</artifactId>
+  			<version>1.5.6</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.slf4j</groupId>
+  			<artifactId>slf4j-log4j12</artifactId>
+  			<version>1.5.6</version>
+		</dependency>
+		<!-- end sl4j -->
+		
+		<!-- Validation api -->
+		<dependency>
+	    	<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.0.0.GA</version>
+		</dependency>
+        <!-- end Validation api -->
+        
+        <!-- Hibernate Validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.2.0.Final</version>
+		</dependency>
+		<!-- end Hibernate Validator -->
+        
+        <!-- apache file upload -->
+        <dependency>
+        	<groupId>commons-io</groupId>
+	  		<artifactId>commons-io</artifactId>
+      		<version>1.4</version>
+    	</dependency>
+    
+        <dependency>
+        	<groupId>commons-fileupload</groupId>
+   			<artifactId>commons-fileupload</artifactId>
+   			<version>1.2.1</version>
+		</dependency>
+		<!-- end apache file upload -->
+		
+		<!-- Jackson JSON Processor -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		<dependency>
+    		<groupId>com.fasterxml.jackson.core</groupId>
+    		<artifactId>jackson-databind</artifactId>
+    		<version>2.2.3</version>
+		</dependency>
+		<!-- End Jackson JSON Processor -->
+		
+		<!-- Excel library --> 
+   		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.6</version>
+   		</dependency>
+   		<!-- End Excel library --> 
+   		
+   		<!-- Open CSV library --> 
+   		<dependency>
+		<groupId>net.sf.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>2.3</version>
+		</dependency>
+        <!-- Open CSV library --> 
+        
+        <!-- DynamicReports -->
+		<dependency>
+		    <groupId>net.sourceforge.dynamicreports</groupId>
+		    <artifactId>dynamicreports-core</artifactId>
+		    <version>2.3.1</version>
+		    <exclusions>
+		        <exclusion>
+		            <groupId>net.sf.barcode4j</groupId>
+		            <artifactId>barcode4j</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>com.sun.xml.bind</groupId>
+		            <artifactId>jaxb-impl</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>org.codehaus.castor</groupId>
+		            <artifactId>castor</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>eclipse</groupId>
+		            <artifactId>jdtcore</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>xml-apis</groupId>
+		            <artifactId>xml-apis</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>jfree</groupId>
+		            <artifactId>jfreechart</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>jfree</groupId>
+		            <artifactId>jcommon</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>bouncycastle</groupId>
+		            <artifactId>bcprov-jdk14</artifactId>
+		        </exclusion>
+		        <exclusion>
+		            <groupId>org.apache.poi</groupId>
+		            <artifactId>poi-ooxml</artifactId>
+		        </exclusion>
+		    </exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+		<dependency>
+		    <groupId>net.sourceforge.jexcelapi</groupId>
+		    <artifactId>jxl</artifactId>
+		    <version>2.6.12</version>
+		</dependency>
+		<!--  <dependency>
+			<groupId>ar.com.fdvs</groupId>
+			<artifactId>DynamicJasper</artifactId>
+			<version>3.0.13</version>
+		</dependency> -->
+		<!-- end DynamicReports -->
+        
+        <!-- web flow library --> 
+        <dependency>
+        	<groupId>org.springframework.webflow</groupId>
+       	 	<artifactId>spring-webflow</artifactId>
+        	<version>2.4.0.RELEASE</version>
+        </dependency>
+        <!-- end web flow library --> 
+        
+		<!-- junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- end junit -->
+		
+	</dependencies>
+
+	<properties>
+		<spring.version>4.1.1.RELEASE</spring.version>
+		<spring.security.version>3.2.0.RELEASE</spring.security.version>
+		<mysql.connector.version>5.1.26</mysql.connector.version>
+		<tiles-version>3.0.3</tiles-version>
+		<log4j.version>1.2.17</log4j.version>
+		<jstl.version>1.2</jstl.version>
+		<pushsharp.version>0.1</pushsharp.version>
+	</properties>
+</project>
